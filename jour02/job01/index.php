@@ -15,11 +15,11 @@
         if($x = 42){
             echo "<b><u>".$x."</u></b>". "<br>";
             $x++;
-        }
+        };
         do{
              echo $x. "<br>";
             $x++;
-        }while($x <1338)
+        }while($x <1338);
     ?>
 
 </body>
