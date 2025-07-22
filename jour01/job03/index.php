@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index</title>
 </head>
+<?php
+    $varBool = true;
+    $varString = "chaine de caractères";
+    $varInteger = 10;
+    $varFloat = 10.1;
+?>
 <body>
     <table>
         <thead>
@@ -14,24 +20,24 @@
         </thead>
         <tbody>
             <tr>
-                <td>Primitif</td>
-                <td>boolean</td>
-                <td>Logiques (True ou false)</td>                
+                <td><?php echo gettype($varBool); ?></td>
+                <td><?php echo"\$varBool"; ?></td>
+                <td>true ou false</td>                
             </tr>
             <tr>
-                <td>Primitif</td>
-                <td>Integer</td>
-                <td>Nombres entier</td>                
+                <td><?php echo gettype($varString); ?></td>
+                <td>$varString</td>
+                <td><?php echo $varString; ?></td>                
             </tr>
             <tr>
-                <td>Primitif</td>
-                <td>String</td>
-                <td>ensemble de mots liés les uns aux autres</td>                
+                <td><?php echo gettype($varInteger); ?></td>
+                <td>varInteger</td>
+                <td><?php echo $varInteger; ?></td>                
             </tr>
             <tr>
-                <td>Primitif</td>
-                <td>Float</td>
-                <td>Nombres décimaux</td>                
+                <td><?php echo gettype($varFloat); ?></td>
+                <td><?php echo "\$varFloat"; ?></td>
+                <td><?php echo $varFloat ?></td>                
             </tr>
         </tbody>
     </table>
