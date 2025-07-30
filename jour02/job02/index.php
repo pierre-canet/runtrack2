@@ -7,43 +7,17 @@
 </head>
 <body>
     <?php
-        $x = 0;
-        while($x <=1337){
-            do{
-                echo $x. "<br>";
-                $x++;
-            }while($x <26);
-            if($x=26){
-                $x++;
-            };
-            do{
-                echo $x. "<br>";
-                $x++;
-            }while($x <37);
-            if($x =37){
-                $x++;
-            };
-            do{
-                echo $x. "<br>";
-                $x++;
-            }while($x <88);
-            if($x=88){
-                $x++;
-            };
-            do{
-                echo $x. "<br>";
-                $x++;
-            }while($x <1111);
-            if($x =1111){
-                $x++;
-            };
-            do{
-                echo $x. "<br>";
-                $x++;
-            }while($x <=1337);
+        $y =array(26, 37, 88, 1111);
+        for($x =0; $x <=1337; $x++){
+            if (!in_array($x, $y)) {
+                echo $x . "<br>";
+            }
         }
+        
         $x = 3233;
-        echo $x;        
+        echo $x;
+        /*Afficher tous les nombres de 0 à 1337 compris SAUF 26, 37, 88, 1111 et 3233 en
+        mettant un retour à la ligne entre chaque nombre (<br />).*/        
     ?>
 </body>
 </html>

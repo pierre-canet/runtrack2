@@ -8,7 +8,7 @@
 <body>
     <form action="" method="POST">
         Pseudonyme: <input type="text" name="username"><br>
-        Mot de passe: <input type="text" name="password"><br>        
+        Mot de passe: <input type="password" name="password"><br>        
         <input type="submit" value="Connexion">
     </form>
     <?php

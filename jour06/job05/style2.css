@@ -1,0 +1,70 @@
+/*Style SF*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #5b85aa;
+  font-family: "Orbitron", sans-serif;
+}
+
+main {
+  text-align: center;
+}
+
+h3 {
+  color: aquamarine;
+}
+
+form {
+  border: solid 3px aquamarine;
+  border-radius: 8px;
+  background-color: turquoise;
+  margin-left: 500px;
+  margin-right: 500px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  row-gap: 10px;
+  padding: 5px;
+}
+
+select {
+  border: solid 2px aquamarine;
+  border-radius: 5px;
+  background-color: #5b85aa;
+  color: aquamarine;
+  margin-left: 40px;
+  margin-right: 40px;
+  font-family: "Orbitron", sans-serif;
+  font-size: 12px;
+  padding: 4px;
+}
+
+select:hover {
+  background-color: #5b85aa;
+  cursor: pointer;
+}
+
+option {
+  background-color: #5b85aa;
+  color: aquamarine;
+}
+
+input {
+  background-color: #5b85aa;
+  color: aquamarine;
+  border-color: aquamarine;
+  border-radius: 5px;
+  padding: 2px;
+  transition: 0.1s;
+}
+
+input:hover {
+  cursor: pointer;
+  background-color: blue;
+}
