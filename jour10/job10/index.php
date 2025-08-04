@@ -4,7 +4,7 @@
     if($mysqli->connect_error){
         die("Erreur de connexion: ".$mysqli->connect_error);
     };
-    $query ="SELECT * FROM etudiants";
+    $query ="SELECT * FROM salles ORDER BY capacite ASC";
     $result = $mysqli->query($query);
     $firstRow = $result->fetch_assoc();
     $columns = array_keys($firstRow);
@@ -16,7 +16,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>job01</title>
+    <title>job10</title>
     <link rel="stylesheet" href="index.css" />
 </head>
 <body>

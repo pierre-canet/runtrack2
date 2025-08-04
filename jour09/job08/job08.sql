@@ -1,1 +1,1 @@
-SELECT COUNT(*) FROM etudiants;
+SELECT COUNT(*) AS Nombre_total_etudiants FROM etudiants;
