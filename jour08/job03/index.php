@@ -21,8 +21,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Job03</title>
+    <link rel="stylesheet" href="index.css" />
 </head>
-<body>  
+<body>
+    
+    <h3>Dénominateur</h3>
 
     <form method="POST">
         Nom : <input type="text" name="prenom">
@@ -30,13 +33,11 @@
         <button type="submit" name="reset">Réinitialiser</button>
     </form>
     <ul>
-        <?php  
+        <?php 
             echo "<ul>";
-            if (!empty($_SESSION['nameList'])) {
-                foreach ($_SESSION['nameList'] as $prenom) {
-                    
+            if(!empty($_SESSION['nameList'])){
+                foreach($_SESSION['nameList'] as $prenom){                    
                     echo "<li>".$prenom."</li>";
-                                       
                 }
             }
             echo "</ul>"; 
