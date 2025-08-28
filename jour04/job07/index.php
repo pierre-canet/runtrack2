@@ -19,21 +19,36 @@
         if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $hauteur = htmlspecialchars($_POST["hauteur"]);
             $largeur = htmlspecialchars($_POST["largeur"]);
-
-            for ($i = 1; $i <= $hauteur; $i++) {                
-                for ($etoile = 1; $etoile <= (2 * $i - 1); $etoile++) {
-                echo  "*";
-                }
-                echo "<br>";
+            $hauteurTriangle = intval($hauteur / 2);
+            while ((2 * $hauteurTriangle - 1) > $largeur) {
+                $hauteurTriangle--;
             }
-
-            for($j =0; $j <$hauteur; $j++){
-                for($i =0; $i <$largeur; $i++){
-                    echo "*"; 
-                }
-                echo "<br>";             
+            $hauteurRectangle = $hauteur - $hauteurTriangle;
+            $hauteurRectangle = $hauteur - $hauteurTriangle;
+            $baseTriangle = 2 * $hauteurTriangle - 1;
+            
+            if ($largeur < (2 * intval($hauteur / 2) - 1)) {
+                echo "Largeur trop petite pour cette hauteur de toit. 
+                Veuillez augmenter la largeur.";
             }
+            else{
+                for ($i = 1; $i <= $hauteurTriangle; $i++) {
+                    $nbEtoiles = 2 * $i - 1;
+                    
+                    echo str_repeat("*", $nbEtoiles);
+                    echo "<br>";
+                }
+
+                for($j =0; $j < $hauteurRectangle; $j++){
+                    for($i =0; $i <$largeur; $i++){
+                        echo "*"; 
+                    }
+                    echo "<br>";             
+                }
+            } // ... dessin de la maison ici
         }
+
+            
 
         /*Faire un formulaire avec deux <input> de type text ayant comme nom “largeur” et
             “hauteur” et un bouton submit.
